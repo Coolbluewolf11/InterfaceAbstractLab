@@ -1,5 +1,6 @@
-package bothLabs;
+package lab1;
 
+import lab2.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -8,12 +9,13 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
+public class AdvancedJavaCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
+    private String prerequisites;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
+    public AdvancedJavaCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
@@ -42,6 +44,19 @@ public class IntroToProgrammingCourse {
             System.exit(0);
         }
         this.credits = credits;
+    }
+
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
 
     public String getCourseName() {

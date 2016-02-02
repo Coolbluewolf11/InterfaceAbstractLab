@@ -1,4 +1,4 @@
-package bothLabs;
+package lab2;
 
 /**
  * Describe responsibilities here.
@@ -7,7 +7,7 @@ package bothLabs;
  * @version     1.00
  */
 public class IntroJavaCourse {
-    String courseName;
+    private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
