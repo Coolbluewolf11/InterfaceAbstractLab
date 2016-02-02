@@ -1,6 +1,4 @@
 package lab1;
-
-import lab2.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -10,15 +8,16 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class IntroToProgrammingCourse extends ProgrammingCourse{
-    
+    private String courseName;
+    private String courseNumber;
+    private double credits;
+    private String prerequisites;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
+    public IntroToProgrammingCourse(String courseName, String courseNumber, int credits) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
+        this.setCredits(credits);
+        this.prerequisites = "none";
     }
 
     public final void setCourseNumber(String courseNumber) {
@@ -43,10 +42,6 @@ public class IntroToProgrammingCourse extends ProgrammingCourse{
         this.credits = credits;
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
-
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -54,14 +49,6 @@ public class IntroToProgrammingCourse extends ProgrammingCourse{
             System.exit(0);
         }
         this.courseName = courseName;
-    }
-    
-    public String GetCourseNumber() {
-        return courseNumber;
-    }
-    
-    public String getPrerequisites() {
-        return prerequisites;
     }
     
     public void setPrerequisites(String prerequisites) {

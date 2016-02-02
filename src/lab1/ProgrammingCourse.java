@@ -11,21 +11,23 @@ package lab1;
  * @author Tim
  */
 public abstract class ProgrammingCourse {
-    String courseName;
-    String courseNumber;
-    String prerequisites;
-    double credits;
+    private String courseName;
+    private String courseNumber;
+    private String prerequisites;
+    private double credits;
     
     public String GetCourseNumber(){
        return courseNumber; 
     };
     public abstract void setCourseNumber(String courseNumber);
     
-    public abstract double getCredits();
+    public double getCredits(){
+        return credits;
+    }
     
     public abstract void setCredits(double credits);
     
-    public abstract String getPrerequisites();
+    public String getPrerequisites(){return prerequisites;}
     
     public abstract void setPrerequisites(String prerequisites);
     

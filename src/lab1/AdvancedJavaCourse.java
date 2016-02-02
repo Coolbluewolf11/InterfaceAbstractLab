@@ -1,6 +1,4 @@
 package lab1;
-
-import lab2.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -9,7 +7,7 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse extends ProgrammingCourse{
     private String courseName;
     private String courseNumber;
     private double credits;
